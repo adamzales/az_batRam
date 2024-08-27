@@ -79,7 +79,7 @@ end
 function berprogress()
     if lib.progressBar({
         duration = 2000,
-        label = 'Vyrážíš dveře',
+        label = Locales.Breaching,
         useWhileDead = false,
         canCancel = true,
         disable = {
@@ -126,7 +126,7 @@ end)
 function lockprogress()
     if lib.progressBar({
         duration = 10000,
-        label = 'Lockpickuješ dveře',
+        label = Locales.lockpicking,
         useWhileDead = false,
         canCancel = true,
         disable = {
@@ -144,7 +144,7 @@ end
 function hackprogress()
     if lib.progressBar({
         duration = 10000,
-        label = 'Hackuješ elektronický zámek',
+        label = Locales.hacking,
         useWhileDead = false,
         canCancel = true,
         disable = {
@@ -161,8 +161,8 @@ function hackprogress()
         ran = math.random(100)
         if ran >= 50 then
             lib.notify({
-                title = 'Nepodařilo se',
-                description = 'Nepodařilo se hacknout elektronický zámek a byl jsi zablokován musíš nyní použít hrubou sílu',
+                title = Locales.HackFailTit,
+                description = Locales.HackFailDesc,
                 type = 'error'
             }) 
         end
