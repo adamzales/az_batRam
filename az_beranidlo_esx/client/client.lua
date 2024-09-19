@@ -79,7 +79,7 @@ end
 function berprogress()
     if lib.progressBar({
         duration = 2000,
-        label = Locales.Breaching,
+        label = Config.Breaching,
         useWhileDead = false,
         canCancel = true,
         disable = {
@@ -126,7 +126,7 @@ end)
 function lockprogress()
     if lib.progressBar({
         duration = 10000,
-        label = Locales.lockpicking,
+        label = Config.lockpicking,
         useWhileDead = false,
         canCancel = true,
         disable = {
@@ -144,7 +144,7 @@ end
 function hackprogress()
     if lib.progressBar({
         duration = 10000,
-        label = Locales.hacking,
+        label = Config.hacking,
         useWhileDead = false,
         canCancel = true,
         disable = {
@@ -161,8 +161,8 @@ function hackprogress()
         ran = math.random(100)
         if ran >= 50 then
             lib.notify({
-                title = Locales.HackFailTit,
-                description = Locales.HackFailDesc,
+                title = Config.HackFailTit,
+                description = Config.HackFailDesc,
                 type = 'error'
             }) 
         end
